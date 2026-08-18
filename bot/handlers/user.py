@@ -47,7 +47,7 @@ async def cmd_start(message: Message, db: DatabaseEngine, state: FSMContext):
     await message.answer(
         "👋 Добро пожаловать!\n\n"
         "Я бот для предложки новостей в канал.\n"
-        "Отправьте мне новость, и администратор рассмотрит её.",
+        "Отправьте мне медиа я повторю))",
         reply_markup=main_menu_keyboard(),
     )
 
@@ -59,10 +59,10 @@ async def cmd_start(message: Message, db: DatabaseEngine, state: FSMContext):
 async def send_news(message: Message, state: FSMContext):
     await state.set_state(UserStates.waiting_for_content)
     await message.answer(
-        "📝 Отправьте мне материал для публикации.\n\n"
+        "📝 Отправьте мне медиа а я повторю)\n\n"
         "Поддерживаются: текст, фото, видео, GIF, стикеры, "
         "голосовые, видеосообщения, аудио и документы.\n\n"
-        "Вы также можете отправить несколько фотографий одновременно (альбом).",
+        "Вы также можете отправить несколько фотографий одновременно (альбом). Буду очень рада любым медиа)",
         reply_markup=cancel_keyboard(),
     )
 
